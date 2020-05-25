@@ -1,0 +1,38 @@
+<div class="_flex-box _w-100">
+  <div class="logo"></div>
+  <div class="_flex-box search-container _ml-auto _mr-auto">
+    <span class="material-icons s_icon">
+      search
+    </span>
+    <div class="_search-item">
+      <input placeholder="Search Items Here">
+    </div>
+  </div>
+  <button mat-button class="login-btn _ml-20 _mr-20" routerLink="login">Login</button>
+
+  <div class="_flex-box _ml-20 _mr-20">
+
+    <button mat-button>
+      <span class="material-icons">
+        shopping_cart
+      </span>
+      <span>cart</span>
+    </button>
+
+  </div>
+</div>
+
+
+
+
+<div class="nav-bar _flex-box">
+  <a class="nav-item _border" routerLink="shopping-mall/books" [routerLinkActive]="'active-route'">books</a>
+  <a class="nav-item _border" routerLink="shopping-mall/audio-books" [routerLinkActive]="'active-route'">audio-books
+  </a>
+  <a class="nav-item _border" routerLink="shopping-mall/udemy-courses" [routerLinkActive]="'active-route'">discounted
+    Udemy
+    courses</a>
+  <a class="nav-item _border" routerLink="shopping-mall/website-templates"
+    [routerLinkActive]="'active-route'">websites-templates
+  </a>
+</div>

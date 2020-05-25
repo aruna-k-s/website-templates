@@ -1,1 +1,209 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    height: 100%;
+    margin: 0px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+._h-100 {
+    height: 100% !important;
+}
+._w-100 {
+    width: 100% !important;
+}
+
+._flex-box {
+    display: flex;
+    align-items: center;
+}
+
+._flex-column-direction {
+    flex-direction: column;
+}
+._ml-auto {
+    margin-left: auto;
+}
+
+._mr-auto {
+    margin-right: auto;
+}
+._border {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+._primary-font {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+._secondary-font {
+    font-size: 14px;
+    font-weight: 400;
+}
+._ternary-font {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+._p-5 {
+    padding: 5px;
+}
+
+._p-10 {
+    padding: 10px;
+}
+
+._p-15 {
+    padding: 15px;
+}
+
+._p-20 {
+    padding: 20px;
+}
+._m-5 {
+    margin: 5px;
+}
+._m-10 {
+    margin: 10px;
+}
+._m-15 {
+    margin: 15px;
+}
+._m-20 {
+    margin: 20px;
+}
+
+._ml-5 {
+    margin-left: 5px;
+}
+._ml-10 {
+    margin-left: 10px;
+}
+._ml-15 {
+    margin-left: 15px;
+}
+._ml-20 {
+    margin-left: 20px;
+}
+
+._mr-5 {
+    margin-right: 5px;
+}
+._mr-10 {
+    margin-right: 10px;
+}
+._mr-15 {
+    margin-right: 15px;
+}
+._mr-20 {
+    margin-right: 20px;
+}
+
+._mt-5 {
+    margin-top: 5px;
+}
+._mt-10 {
+    margin-top: 10px;
+}
+._mt-15 {
+    margin-top: 15px;
+}
+._mt-20 {
+    margin-top: 20px;
+}
+
+._mb-5 {
+    margin-bottom: 5px;
+}
+._mb-10 {
+    margin-bottom: 10px;
+}
+._mb-15 {
+    margin-bottom: 15px;
+}
+._mb-20 {
+    margin-bottom: 20px;
+}
+
+._pr-5 {
+    padding-right: 5px;
+}
+._pr-10 {
+    padding-right: 10px;
+}
+._pr-15 {
+    padding-right: 15px;
+}
+._pr-20 {
+    padding-right: 20px;
+}
+
+._pl-5 {
+    padding-left: 5px;
+}
+._pl-10 {
+    padding-left: 10px;
+}
+._pl-15 {
+    padding-left: 15px;
+}
+._pl-20 {
+    padding-left: 20px;
+}
+
+._pt-5 {
+    padding-top: 5px;
+}
+._pt-10 {
+    padding-top: 10px;
+}
+._pt-15 {
+    padding-top: 15px;
+}
+._pt-20 {
+    padding-top: 20px;
+}
+
+._pb-5 {
+    padding-bottom: 5px;
+}
+._pb-10 {
+    padding-bottom: 10px;
+}
+._pb-15 {
+    padding-bottom: 15px;
+}
+._pb-20 {
+    padding-bottom: 20px;
+}
+
+._text-align-center {
+    text-align: center;
+}
+._ellipses {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+._flex-box {
+    display: flex;
+    align-items: center;
+}
+._col-flex {
+    flex-direction: column;
+}
+
+._custom-input {
+    margin-top: 20px;
+}
+
+._capitalize {
+    text-transform: capitalize;
+}

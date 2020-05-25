@@ -1,0 +1,33 @@
+.img {
+    height: 280px;
+    width: 210px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: currentcolor;
+    border-radius: 10px 10px 0px 0px;
+}
+.item {
+    border-radius: 10px;
+    .details {
+        padding: 0px 10px;
+    }
+}
+.item:hover {
+    animation-name: hovershadow;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes hovershadow {
+    0% {
+        box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0px -1px 11px 0.5px rgba(0, 0, 0, 0.5);
+    }
+}
+.item-list {
+    flex-wrap: wrap;
+}

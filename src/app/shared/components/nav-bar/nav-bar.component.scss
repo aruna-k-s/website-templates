@@ -1,0 +1,51 @@
+@import "../../../../assets/css/varialbes";
+
+.nav-item {
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    flex-grow: 1;
+    text-decoration: none;
+    text-align: center;
+}
+.nav-bar {
+    position: sticky;
+    top: 0px;
+    background: white;
+}
+.active-route {
+    border: 1px solid $border-color;
+    opacity: 0.5;
+    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.38);
+}
+
+.logo {
+    background: url("../../../../assets/images/user-male.png");
+    background-size: contain;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+}
+
+.s_icon {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+._search-item {
+    width: calc(100% - 40px);
+    input {
+        width: 100%;
+        border: none;
+        background: white;
+        height: 40px;
+        padding: 0px;
+    }
+}
+.search-container {
+    width: 50%;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+}
