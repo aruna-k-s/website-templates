@@ -6,9 +6,9 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemSuggestionComponent } from './item-suggestion/item-suggestion.component';
 import { MainRoutingModule } from './main-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedMaterialModule } from '../shared/shared-material.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { SharedMaterialModule } from '../shared/shared-material.module';
     ShoppingMallComponent,
     ItemDetailsComponent,
     ItemSuggestionComponent,
-    LoginComponent
+    CartComponent
   ],
   imports: [
     CommonModule,

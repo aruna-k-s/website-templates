@@ -1,6 +1,16 @@
 <div class="container">
   <div class="_flex-box _p-20 item-list">
     <div *ngFor="let product of productList" class="_border item _m-10">
+      <div class="overlay">
+        <div class="center _flex-box">
+          <button mat-icon-button>
+            <span class="round-thumbnail share-icon"></span>
+          </button>
+          <button mat-icon-button>
+            <span class="round-thumbnail cart-icon"></span>
+          </button>
+        </div>
+      </div>
       <div class="img" [ngStyle]="{'background-image': 'url('+ product.imgUrl + ')' }"></div>
       <div class="details">
         <div class=" _p-5 _primary-font _w-100  _ellipses _capitalize">{{product.name}}</div>

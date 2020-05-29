@@ -1,0 +1,21 @@
+@mixin commonIcon($iconName) {
+    background: url("/assets/icons/" + $iconName + ".png") no-repeat;
+    background-size: contain !important;
+    background-position: center !important;
+    width: 25px !important;
+    height: 25px !important;
+    line-height: 1em;
+    display: inline-block;
+    object-fit: cover;
+}
+
+@mixin commonImage($iconName) {
+    background: url("/assets/images/" + $iconName + ".png") no-repeat;
+    background-size: contain !important;
+    background-position: center !important;
+    width: 25px !important;
+    height: 25px !important;
+    line-height: 1em;
+    display: inline-block;
+    object-fit: cover;
+}

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ShoppingMallComponent } from './shopping-mall/shopping-mall.component';
-import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -20,8 +19,8 @@ const routes: Routes = [
         component: ItemDetailsComponent
       },
       {
-        path: 'login',
-        component: LoginComponent
+        path: 'shopping-cart',
+        component: CartComponent
       },
       {
         path: 'website-templates',

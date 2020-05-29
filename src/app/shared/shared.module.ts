@@ -8,6 +8,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RouterModule } from "@angular/router";
 import { ApiService } from './services/api.service';
 import { SharedMaterialModule } from './shared-material.module';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AppService } from './services/app.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { SharedMaterialModule } from './shared-material.module';
     UserSharedViewContainerComponent,
     MagnifiedViewImageComponent,
     HowDoIHelpComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedMaterialModule
+    SharedMaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     ReviewComponent,
@@ -29,8 +35,12 @@ import { SharedMaterialModule } from './shared-material.module';
     HowDoIHelpComponent,
     NavBarComponent
   ],
+  entryComponents: [
+    LoginComponent
+  ],
   providers: [
-    ApiService
+    ApiService,
+    AppService
   ]
 })
 export class SharedModule { }
