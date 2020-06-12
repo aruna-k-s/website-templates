@@ -11,10 +11,11 @@ export class MainComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.navigateTo('shopping-mall/books');
   }
 
   navigateTo(route) {
     this.router.navigate(['main/' + route]);
   }
-  
+
 }

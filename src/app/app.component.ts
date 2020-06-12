@@ -18,8 +18,10 @@ export class AppComponent implements OnInit {
       this.welcomeTimer = false;
     }, 1000);
   }
+
+
   navigateTo(route) {
     this.router.navigate(['main/' + route]);
   }
-  
+
 }

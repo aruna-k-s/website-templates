@@ -11,6 +11,7 @@ import { SharedMaterialModule } from './shared-material.module';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppService } from './services/app.service';
+import { InputDebounceDirective } from './directives/input-debounce.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AppService } from './services/app.service';
     MagnifiedViewImageComponent,
     HowDoIHelpComponent,
     NavBarComponent,
-    LoginComponent
+    LoginComponent,
+    InputDebounceDirective
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { AppService } from './services/app.service';
     UserSharedViewContainerComponent,
     MagnifiedViewImageComponent,
     HowDoIHelpComponent,
-    NavBarComponent
+    NavBarComponent,
+    InputDebounceDirective
   ],
   entryComponents: [
     LoginComponent

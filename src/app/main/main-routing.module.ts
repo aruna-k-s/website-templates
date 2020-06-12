@@ -15,7 +15,7 @@ const routes: Routes = [
         component: ShoppingMallComponent
       },
       {
-        path: 'item/:item-type/:name',
+        path: 'item/:itemType/:itemId/:name',
         component: ItemDetailsComponent
       },
       {

@@ -5,7 +5,7 @@
       search
     </span>
     <div class="_search-item">
-      <input placeholder="Search Items Here">
+      <input placeholder="Search Items Here" appInputDebounce [debounceTime]="500" (callBack)="globalSearch(query.value)" #query >
     </div>
   </div>
   <button mat-button class="login-btn _ml-20 _mr-20" (click) = "openLoginDialog()">Login</button>
