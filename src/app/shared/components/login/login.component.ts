@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { MatDialogRef } from '@angular/material/dialog';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'login',
@@ -11,7 +13,8 @@ import { environment } from 'src/environments/environment';
 export class LoginComponent implements OnInit {
   userRegisterForm: FormGroup;
   userLoginForm: FormGroup;
-  constructor(private http: HttpClient) { }
+
+  constructor(private apiService: ApiService, private dialogRef: MatDialogRef<LoginComponent>) { }
 
 
   showPassword = false;
@@ -22,11 +25,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.userLoginForm = new FormGroup({
-      email: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required)
     });
     this.userRegisterForm = new FormGroup({
-      email: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
       confPassword: new FormControl('', Validators.required)
     });
@@ -43,14 +46,23 @@ export class LoginComponent implements OnInit {
 
   registerUser() {
     this.userRegisterForm.removeControl('confPassword');
-    this.http.post( environment.api_url + 'user/register', this.userRegisterForm.value).subscribe(res => {
+    this.apiService.postdata(environment.api_url + 'user/register', this.userRegisterForm.value).subscribe(res => {
+      console.log(res);
+      if (res['status'] === 'success') {
+        this.close();
+      }
+    });
+  }
+
+  loginUser() {
+    this.apiService.postdata(environment.api_url + 'user/login', this.userLoginForm.value).subscribe(res => {
       console.log(res);
     })
   }
 
-  loginUser() {
-    this.http.post( environment.api_url + 'user/login', this.userLoginForm.value).subscribe(res => {
-      console.log(res);
-    })
+  close() {
+    this.dialogRef.close({
+      message: 'dialog closed'
+    });
   }
 }

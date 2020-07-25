@@ -1,10 +1,32 @@
-const express = require('express');
+const express = require("express");
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const userRoutes = require('./routes/user')
+
+
 const app = express();
-const port = process.env.PORT || port;
-const www = process.env.WWW || './';
-app.use(express.static(www));
-console.log(`serving ${www}`);
-app.get('*', (req, res) => {
-    res.sendFile(`index.html`, { root: www });
+mongoose.connect("mongodb+srv://websiteTemplate:VWzNe96XYToIbFlx@cluster-4aepj.mongodb.net/websiteTemplate?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true })
+    .then(() => {
+        console.log('database connected successfully');
+    })
+    .catch((err) => {
+        console.log('batabase connection failed', err);
+    })
+
+
+app.use(bodyParser.json());
+
+// const a ='VWzNe96XYToIbFlx';
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept");
+    res.setHeader("Access-Control-Allow-Methods", "GET , POST, PATCH, PUT, DELETE, OPTIONS");
+    next();
 });
-app.listen(port, () => console.log(`listening on http://localhost:${port}`));
+
+
+app.use("/api/user", userRoutes);
+
+module.exports = app;

@@ -3,11 +3,11 @@
     <div *ngFor="let product of productList" class="_border item _m-10" (click)="getProductDetail(product)">
       <div class="overlay">
         <div class="center _flex-box">
-          <button mat-icon-button>
+          <button mat-icon-button (click)="stopPropagation($event)">
             <span class=" share-icon"></span>
           </button>
-          <button mat-icon-button>
-            <span class="cart-icon"></span>
+          <button mat-icon-button  (click)="stopPropagation($event)">
+            <span class="cart-icon" ></span>
           </button>
         </div>
       </div>

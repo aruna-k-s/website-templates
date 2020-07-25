@@ -30,7 +30,9 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/epubjs/dist/epub.js",
+              "node_modules/epubjs/dist/epub.min.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -138,5 +140,8 @@
       }
     }
   },
-  "defaultProject": "websiteTemplates"
+  "defaultProject": "websiteTemplates",
+  "cli": {
+    "analytics": false
+  }
 }

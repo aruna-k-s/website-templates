@@ -155,4 +155,7 @@ export class ShoppingMallComponent implements OnInit {
     this.router.navigateByUrl('/main/item/' + this.selectedProductType + '/' + product['id'] + '/' + product['name'])
   }
 
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
 }

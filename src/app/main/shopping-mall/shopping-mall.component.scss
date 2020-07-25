@@ -6,7 +6,7 @@
 }
 
 .cart-icon {
-    @include commonImage('add-shoppinig-cart')
+    @include commonImage('add-shoppinig-cart');
     background: url("../../../assets/images/add-shoppinig-cart.png");
 }
 
@@ -56,8 +56,10 @@
 .overlay {
     display: none;
     position: absolute;
-    height: 280px;
-    width: 210px;
+    height: 50px;
+    width: 100px;
+    right: 0px;
+    border-radius: 0px 5px;
     background-color: rgba(255, 255, 255, 0.5);
     animation: enterFromLeft 0.2s linear forwards;
 }

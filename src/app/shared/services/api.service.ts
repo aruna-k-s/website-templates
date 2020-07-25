@@ -14,16 +14,14 @@ export class ApiService {
   }
 
   postdata(url, body, header?) {
-    return this.httpClient.post(url, body, header).pipe(tap(data => {
-      if (data['status'] !== 'success') {
-        {
-          console.log('error msg');
+    return this.httpClient.post(url, body, header).pipe(
+      tap( data => {
+          data;
+        }, errorData => {
+          console.error(errorData);
         }
-      }
-    },
-      errordata => {
-        console.log(errordata);
-      }));
+      )
+    );
   }
 
   putdata(url, body, headers?) {
